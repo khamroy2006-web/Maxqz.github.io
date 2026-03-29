@@ -40,6 +40,9 @@ function load() {
     for (let j=0;j<4;j++){
         document.getElementById("a"+j).innerText = questions[i].a[j];
     }
+
+    document.getElementById("progress").innerText =
+        "ข้อ " + (i+1) + " / " + questions.length;
 }
 
 function answer(n) {
@@ -53,7 +56,7 @@ function answer(n) {
         load();
     } else {
         document.body.innerHTML =
-        "<h1>จบแล้ว 🎉</h1><p>คะแนน: "+score+"</p>";
+        "<h1>จบแล้ว 🎉</h1><p>คะแนน: "+score+" / "+questions.length+"</p><a href='../machine.html'>กลับ</a>";
     }
 }
 
