@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Machine Quiz</title>
-<link rel="stylesheet" href="../style.css">
+  <title>Machine Quiz</title>
+  <link rel="stylesheet" href="../../style.css">
 </head>
 
 <body>
 
-<h1>⚙️ Machine Quiz</h1>
+<h1>📝 Machine Quiz</h1>
 
-<p id="question"></p>
+<p>Magnetic Flux เทียบกับอะไร?</p>
 
-<button onclick="answer(0)" id="a0"></button>
-<button onclick="answer(1)" id="a1"></button>
-<button onclick="answer(2)" id="a2"></button>
-<button onclick="answer(3)" id="a3"></button>
+<button onclick="checkAnswer('a')">Current</button>
+<button onclick="checkAnswer('b')">Voltage</button>
+<button onclick="checkAnswer('c')">Resistance</button>
 
 <p id="result"></p>
 
-<script src="machine.js"></script>
+<br>
+<a href="../machine.html">⬅ กลับ</a>
+
+<script>
+function checkAnswer(ans){
+  if(ans === 'a'){
+    document.getElementById("result").innerText = "✅ ถูกต้อง!";
+  } else {
+    document.getElementById("result").innerText = "❌ ผิดนะ";
+  }
+}
+</script>
 
 </body>
 </html>
